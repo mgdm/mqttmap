@@ -23,7 +23,7 @@ function onMessage(message) {
     console.log(m);
 
     const marker = L.marker([m["lat"], m["lon"]]).addTo(map);
-    marker.bindPopup(m["label"]);
+    marker.bindPopup(m["label"]); // This is probably a bit insecure! Make sure you trust or validate the source
 };
 
 function onConnectionLost(responseObject) {
